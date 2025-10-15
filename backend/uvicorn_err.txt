@@ -1,0 +1,47 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\dev2\\Downloads\\Fortes_Assesment\\Fortes_Assesment\\backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [504] using WatchFiles
+INFO:     Started server process [5420]
+INFO:     Waiting for application startup.
+2025-10-15 21:36:36,750 - app.core.minio - INFO - Creating MinIO client instance.
+2025-10-15 21:36:36,752 - app.core.minio - INFO - Checking if bucket documents exists.
+2025-10-15 21:36:40,826 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002026959EF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:36:45,311 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000202695ABED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:36:50,192 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002026A5F4050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:36:55,858 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000202695990F0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:37:03,112 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020269599220>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:37:07,181 - app.core.minio - WARNING - \u26a0\ufe0f  MinIO not available: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: /documents?location= (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000202695E9FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')). Continuing without object storage. Documents will be stored in local filesystem.
+2025-10-15 21:37:07,221 - alembic.runtime.migration - INFO - Context impl SQLiteImpl.
+2025-10-15 21:37:07,222 - alembic.runtime.migration - INFO - Will assume non-transactional DDL.
+2025-10-15 21:37:07,227 - app.startup.migarate - WARNING - No migration heads found. Database might not be initialized.
+2025-10-15 21:37:07,229 - app.startup.migarate - INFO - Current revision: None, upgrading to: head
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> initial_schema, initial schema
+INFO  [alembic.runtime.migration] Running upgrade initial_schema -> 59cfa0f1361d, rename_metadata_to_chunk_metadata
+INFO  [alembic.runtime.migration] Running upgrade 59cfa0f1361d -> fd73eebc87c1, add document uploads table
+INFO  [alembic.runtime.migration] Running upgrade fd73eebc87c1 -> 5be054bd6587, add_document_upload_id_to_processing_tasks
+INFO  [alembic.runtime.migration] Running upgrade 5be054bd6587 -> e214adf7fb66, add_api_keys_table
+INFO  [alembic.runtime.migration] Running upgrade e214adf7fb66 -> 3580c0dcd005, increase_api_key_length
+INFO  [uvicorn.error] Application startup complete.
+INFO  [uvicorn.access] 127.0.0.1:56895 - "GET /api/health HTTP/1.1" 200
+WARNING:  WatchFiles detected changes in 'app\models\chat.py', 'alembic\versions\5be054bd6587_add_document_upload_id_to_processing_.py', 'app\startup\migarate.py', 'alembic\versions\3580c0dcd005_increase_api_key_length.py', 'app\services\vector_store\chroma.py', 'app\core\minio.py', 'alembic\versions\59cfa0f1361d_rename_metadata_to_chunk_metadata.py', 'alembic\versions\initial_schema.py', 'alembic\versions\e214adf7fb66_add_api_keys_table.py', 'app\models\knowledge.py'. Reloading...
+INFO  [uvicorn.error] Shutting down
+INFO  [uvicorn.error] Waiting for application shutdown.
+INFO  [uvicorn.error] Application shutdown complete.
+INFO  [uvicorn.error] Finished server process [5420]
+INFO:     Started server process [17336]
+INFO:     Waiting for application startup.
+2025-10-15 21:41:19,810 - app.core.minio - INFO - Creating MinIO client instance.
+2025-10-15 21:41:19,811 - app.core.minio - INFO - Checking if bucket documents exists.
+2025-10-15 21:41:23,890 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1C98FEF90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:41:28,352 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1C9CC4050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:41:33,231 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1C9CC4190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:41:38,924 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1C98E1350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:41:46,169 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1C98E1480>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /documents?location=
+2025-10-15 21:41:50,237 - app.core.minio - WARNING - \u26a0\ufe0f  MinIO not available: HTTPConnectionPool(host='localhost', port=9000): Max retries exceeded with url: /documents?location= (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B1C9949FD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')). Continuing without object storage. Documents will be stored in local filesystem.
+2025-10-15 21:41:50,257 - alembic.runtime.migration - INFO - Context impl SQLiteImpl.
+2025-10-15 21:41:50,258 - alembic.runtime.migration - INFO - Will assume non-transactional DDL.
+2025-10-15 21:41:50,267 - app.startup.migarate - INFO - Database is already at the latest version: 3580c0dcd005
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\main.py'. Reloading...

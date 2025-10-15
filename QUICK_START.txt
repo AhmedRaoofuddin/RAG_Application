@@ -1,0 +1,53 @@
+╔════════════════════════════════════════════════════════════╗
+║        FORTES EDUCTION - QUICK START GUIDE                ║
+╚════════════════════════════════════════════════════════════╝
+
+🚀 TO START THE APPLICATION:
+   Double-click: start_app.bat
+   
+   This opens 2 windows:
+   • Backend (Python) - Port 8000
+   • Frontend (Next.js) - Port 3000/3001
+
+⏱️ WAIT 15-20 seconds for both to fully start
+
+🌐 THEN OPEN YOUR BROWSER:
+   http://localhost:3000
+
+🛑 TO STOP THE APPLICATION:
+   Double-click: stop_app.bat
+
+📍 ACCESS POINTS:
+   • Main App:      http://localhost:3000
+   • Backend API:   http://localhost:8000
+   • API Docs:      http://localhost:8000/docs
+   • Health Check:  http://localhost:8000/api/health
+
+✅ WHAT TO DO FIRST:
+   1. Go to "Knowledge Base" menu
+   2. Click "New Knowledge Base"
+   3. Enter name and description
+   4. Upload documents (PDF, TXT, MD)
+   5. Go to "Chat" and ask questions!
+
+🔧 IF SOMETHING GOES WRONG:
+   1. Run: stop_app.bat
+   2. Delete: backend\data\fortes.db
+   3. Run: start_app.bat again
+
+📝 IMPORTANT NOTES:
+   • First start takes 15-20 seconds
+   • Don't close the 2 terminal windows
+   • If port 3000 is busy, it will use 3001
+   • Database is at: backend\data\fortes.db
+
+💡 TIPS:
+   • Keep both terminal windows open
+   • Refresh browser if you see 404 errors (Ctrl+Shift+R)
+   • Check terminal windows for error messages
+   • Backend must start before frontend
+
+═══════════════════════════════════════════════════════════
+                    ENJOY FORTES EDUCTION! 🎓
+═══════════════════════════════════════════════════════════
+

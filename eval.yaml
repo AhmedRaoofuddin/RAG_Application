@@ -1,0 +1,122 @@
+evaluation_set:
+  # Overview and Basic Questions
+  - question: "What is Fortes Eduction?"
+    expected_answer: "Fortes Eduction is an advanced Retrieval-Augmented Generation RAG question-answering system"
+    expected_citations: ["01_fortes_eduction_overview.md"]
+    metadata:
+      category: "overview"
+      difficulty: "easy"
+
+  - question: "What are the key features of Fortes Eduction?"
+    expected_answer: "Key features include intelligent document management, advanced guardrails, attribution and hallucination detection, and observability"
+    expected_citations: ["01_fortes_eduction_overview.md"]
+    metadata:
+      category: "overview"
+      difficulty: "medium"
+
+  # Installation and Setup
+  - question: "How do I install Fortes Eduction?"
+    expected_answer: "Clone the repository, install Python and Node.js dependencies, configure environment variables, and start the backend and frontend services"
+    expected_citations: ["02_installation_guide.md"]
+    metadata:
+      category: "installation"
+      difficulty: "medium"
+
+  - question: "What are the prerequisites for installation?"
+    expected_answer: "Python 3.9 or higher, Node.js 18 or higher, and 8GB+ RAM recommended"
+    expected_citations: ["02_installation_guide.md"]
+    metadata:
+      category: "installation"
+      difficulty: "easy"
+
+  # Guardrails
+  - question: "What types of guardrails does Fortes Eduction have?"
+    expected_answer: "Prompt injection detection, PII redaction, and grounding score validation"
+    expected_citations: ["03_guardrails_documentation.md"]
+    metadata:
+      category: "guardrails"
+      difficulty: "medium"
+
+  - question: "How does PII redaction work?"
+    expected_answer: "PII redaction removes personally identifiable information like email addresses and phone numbers from both input and output"
+    expected_citations: ["03_guardrails_documentation.md"]
+    metadata:
+      category: "guardrails"
+      difficulty: "medium"
+
+  # Attribution System
+  - question: "What is sentence-level attribution?"
+    expected_answer: "Sentence-level attribution maps each sentence in a generated response to supporting chunks from the knowledge base with citations"
+    expected_citations: ["04_attribution_system.md"]
+    metadata:
+      category: "attribution"
+      difficulty: "medium"
+
+  - question: "What is a hallucination in the context of RAG?"
+    expected_answer: "A hallucination occurs when the system generates a claim not supported by retrieved knowledge base content"
+    expected_citations: ["04_attribution_system.md"]
+    metadata:
+      category: "attribution"
+      difficulty: "medium"
+
+  # Configuration
+  - question: "What database options are supported?"
+    expected_answer: "SQLite as default, with optional support for MySQL and Pinecone"
+    expected_citations: ["06_configuration_guide.md"]
+    metadata:
+      category: "configuration"
+      difficulty: "easy"
+
+  - question: "What is the default grounding threshold?"
+    expected_answer: "The default grounding threshold is 0.62"
+    expected_citations: ["06_configuration_guide.md", "03_guardrails_documentation.md"]
+    metadata:
+      category: "configuration"
+      difficulty: "easy"
+
+  # Evaluation
+  - question: "What metrics does the evaluation system track?"
+    expected_answer: "The evaluation system tracks Exact Match EM, F1 Score, Semantic Similarity, and Citation Accuracy"
+    expected_citations: ["08_evaluation_system.md"]
+    metadata:
+      category: "evaluation"
+      difficulty: "medium"
+
+  - question: "What is a good F1 score?"
+    expected_answer: "A good F1 score is above 0.80"
+    expected_citations: ["08_evaluation_system.md"]
+    metadata:
+      category: "evaluation"
+      difficulty: "easy"
+
+  # Performance
+  - question: "How can I optimize query performance?"
+    expected_answer: "Optimize by tuning chunk size, adjusting TOP_K retrieval, enabling caching, and selecting appropriate models"
+    expected_citations: ["10_performance_optimization.md"]
+    metadata:
+      category: "performance"
+      difficulty: "medium"
+
+  # Security
+  - question: "What are the security best practices?"
+    expected_answer: "Store API keys securely, use HTTPS, implement authentication, enable guardrails, and keep dependencies updated"
+    expected_citations: ["09_security_best_practices.md"]
+    metadata:
+      category: "security"
+      difficulty: "medium"
+
+  # Troubleshooting
+  - question: "What should I do if I see a 'No OpenAI API Key' warning?"
+    expected_answer: "This is expected if no API key is configured. Set OPENAI_API_KEY in .env for production use. The system will work in stub mode for development"
+    expected_citations: ["07_troubleshooting.md"]
+    metadata:
+      category: "troubleshooting"
+      difficulty: "easy"
+
+# Evaluation configuration
+config:
+  min_f1_score: 0.75
+  min_semantic_similarity: 0.80
+  min_citation_accuracy: 0.70
+  min_exact_match: 0.50
+
