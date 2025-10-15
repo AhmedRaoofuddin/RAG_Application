@@ -1,9 +1,9 @@
-# Start Fortes Eduction Backend
+# Start Fortes Education Backend
 $env:OPENAI_API_KEY='your-openai-api-key-here'
 $env:OPENAI_API_BASE='https://api.openai.com/v1'
 $env:EMBEDDING_MODEL='text-embedding-3-small'
 $env:GENERATION_MODEL='gpt-4o-mini'
-$env:PROJECT_NAME='Fortes Eduction'
+$env:PROJECT_NAME='Fortes Education'
 $env:VERSION='1.0.0'
 $env:RAG_STORE='sqlite'
 $env:SQLITE_FILE='./fortes.db'
@@ -12,7 +12,7 @@ $env:CHROMA_DB_HOST='localhost'
 $env:CHROMA_DB_PORT='8000'
 
 Write-Host "================================"
-Write-Host "Fortes Eduction Backend Starting"
+Write-Host "Fortes Education Backend Starting"
 Write-Host "================================"
 Write-Host ""
 Write-Host "OpenAI Key: Configured ✓"

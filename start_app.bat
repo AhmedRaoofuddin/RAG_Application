@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo Starting Fortes Eduction Application
+echo Starting Fortes Education Application
 echo ========================================
 echo.
 echo This will open 2 terminal windows:

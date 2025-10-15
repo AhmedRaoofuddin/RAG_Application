@@ -1,4 +1,4 @@
-# Fortes Eduction - Quick Start Guide
+# Fortes Education - Quick Start Guide
 
 ## 🚀 Running the Application
 

@@ -1,8 +1,8 @@
 @echo off
-REM Fortes Eduction - Run All Tests and Evaluation (Windows)
+REM Fortes Education - Run All Tests and Evaluation (Windows)
 
 echo ================================================
-echo Fortes Eduction - Comprehensive Test Suite
+echo Fortes Education - Comprehensive Test Suite
 echo ================================================
 echo.
 

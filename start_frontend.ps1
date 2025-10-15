@@ -1,7 +1,7 @@
-# Start Fortes Eduction Frontend
+# Start Fortes Education Frontend
 
 Write-Host "================================="
-Write-Host "Fortes Eduction Frontend Starting"
+Write-Host "Fortes Education Frontend Starting"
 Write-Host "================================="
 Write-Host ""
 Write-Host "Installing dependencies..."

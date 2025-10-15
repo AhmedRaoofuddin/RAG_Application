@@ -1,8 +1,8 @@
 #!/bin/bash
-# Fortes Eduction - Run All Tests and Evaluation
+# Fortes Education - Run All Tests and Evaluation
 
 echo "================================================"
-echo "Fortes Eduction - Comprehensive Test Suite"
+echo "Fortes Education - Comprehensive Test Suite"
 echo "================================================"
 echo ""
 

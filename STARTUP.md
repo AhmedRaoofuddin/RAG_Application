@@ -1,4 +1,4 @@
-# Fortes Eduction - Quick Start
+# Fortes Education - Quick Start
 
 ## System Status ✅
 

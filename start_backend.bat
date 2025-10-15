@@ -1,7 +1,7 @@
 @echo off
 cd backend
 echo ========================================
-echo Starting Fortes Eduction Backend
+echo Starting Fortes Education Backend
 echo ========================================
 echo.
 echo Port: 8000
@@ -17,7 +17,7 @@ set SQLITE_FILE=./data/fortes.db
 set VECTOR_STORE_TYPE=chroma
 set EMBEDDING_MODEL=text-embedding-3-small
 set GENERATION_MODEL=gpt-4o-mini
-set PROJECT_NAME=Fortes Eduction
+set PROJECT_NAME=Fortes Education
 set VERSION=1.0.0
 
 echo Starting server (migrations will run automatically)...

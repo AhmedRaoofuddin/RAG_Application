@@ -1,6 +1,6 @@
 @echo off
 echo ================================================
-echo Fortes Eduction - Complete End-to-End Demo
+echo Fortes Education - Complete End-to-End Demo
 echo ================================================
 echo.
 
@@ -11,7 +11,7 @@ set EMBEDDING_MODEL=text-embedding-3-small
 set GENERATION_MODEL=gpt-4o-mini
 set RAG_STORE=sqlite
 set SQLITE_FILE=./fortes.db
-set PROJECT_NAME=Fortes Eduction
+set PROJECT_NAME=Fortes Education
 set VERSION=1.0.0
 set VECTOR_STORE_TYPE=chroma
 set ENABLE_TOKEN_LOGGING=true

@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo Stopping Fortes Eduction Application
+echo Stopping Fortes Education Application
 echo ========================================
 echo.
 echo Stopping all Python processes (Backend)...

@@ -1,4 +1,4 @@
--- Fortes Eduction Database Schema
+-- Fortes Education Database Schema
 -- This file documents the database schema for reference
 -- Actual migrations run automatically via Alembic on application startup
 
