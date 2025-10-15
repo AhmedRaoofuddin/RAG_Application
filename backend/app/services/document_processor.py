@@ -178,54 +178,48 @@ async def upload_document(file: UploadFile, kb_id: int) -> UploadResult:
 
 async def preview_document(file_path: str, chunk_size: int = 1000, chunk_overlap: int = 200) -> PreviewResult:
     """Step 2: Generate preview chunks"""
-    # Get file from MinIO
-    minio_client = get_minio_client()
-    _, ext = os.path.splitext(file_path)
+    # Get file from local storage (file_path is like "kb_{kb_id}/temp/{filename}")
+    from pathlib import Path
+    local_file_path = Path("data/uploads") / file_path
+    
+    # Ensure the file exists
+    if not local_file_path.exists():
+        raise FileNotFoundError(f"File not found at {local_file_path}")
+    
+    _, ext = os.path.splitext(str(local_file_path))
     ext = ext.lower()
     
-    # Download to temp file
-    with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as temp_file:
-        minio_client.fget_object(
-            bucket_name=settings.MINIO_BUCKET_NAME,
-            object_name=file_path,
-            file_path=temp_file.name
-        )
-        temp_path = temp_file.name
+    # Select appropriate loader
+    if ext == ".pdf":
+        loader = PyPDFLoader(str(local_file_path))
+    elif ext == ".docx":
+        loader = Docx2txtLoader(str(local_file_path))
+    elif ext == ".md":
+        loader = UnstructuredMarkdownLoader(str(local_file_path))
+    else:  # Default to text loader
+        loader = TextLoader(str(local_file_path))
     
-    try:
-        # Select appropriate loader
-        if ext == ".pdf":
-            loader = PyPDFLoader(temp_path)
-        elif ext == ".docx":
-            loader = Docx2txtLoader(temp_path)
-        elif ext == ".md":
-            loader = UnstructuredMarkdownLoader(temp_path)
-        else:  # Default to text loader
-            loader = TextLoader(temp_path)
-        
-        # Load and split the document
-        documents = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=chunk_size,
-            chunk_overlap=chunk_overlap
+    # Load and split the document
+    documents = loader.load()
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap
+    )
+    chunks = text_splitter.split_documents(documents)
+    
+    # Convert to preview format
+    preview_chunks = [
+        TextChunk(
+            content=chunk.page_content,
+            metadata=chunk.metadata
         )
-        chunks = text_splitter.split_documents(documents)
-        
-        # Convert to preview format
-        preview_chunks = [
-            TextChunk(
-                content=chunk.page_content,
-                metadata=chunk.metadata
-            )
-            for chunk in chunks
-        ]
-        
-        return PreviewResult(
-            chunks=preview_chunks,
-            total_chunks=len(chunks)
-        )
-    finally:
-        os.unlink(temp_path)
+        for chunk in chunks
+    ]
+    
+    return PreviewResult(
+        chunks=preview_chunks,
+        total_chunks=len(chunks)
+    )
 
 async def process_document_background(
     temp_path: str,
