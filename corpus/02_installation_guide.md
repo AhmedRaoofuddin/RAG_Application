@@ -1,8 +1,8 @@
-# Fortes Eduction Installation Guide
+# Fortes Education Installation Guide
 
 ## Prerequisites
 
-Before installing Fortes Eduction, ensure you have:
+Before installing Fortes Education, ensure you have:
 - Python 3.9 or higher
 - Node.js 18 or higher
 - 8GB+ RAM recommended

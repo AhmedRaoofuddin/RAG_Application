@@ -1,13 +1,13 @@
 evaluation_set:
   # Overview and Basic Questions
-  - question: "What is Fortes Eduction?"
-    expected_answer: "Fortes Eduction is an advanced Retrieval-Augmented Generation RAG question-answering system"
+  - question: "What is Fortes Education?"
+    expected_answer: "Fortes Education is an advanced Retrieval-Augmented Generation RAG question-answering system"
     expected_citations: ["01_fortes_eduction_overview.md"]
     metadata:
       category: "overview"
       difficulty: "easy"
 
-  - question: "What are the key features of Fortes Eduction?"
+  - question: "What are the key features of Fortes Education?"
     expected_answer: "Key features include intelligent document management, advanced guardrails, attribution and hallucination detection, and observability"
     expected_citations: ["01_fortes_eduction_overview.md"]
     metadata:
@@ -15,7 +15,7 @@ evaluation_set:
       difficulty: "medium"
 
   # Installation and Setup
-  - question: "How do I install Fortes Eduction?"
+  - question: "How do I install Fortes Education?"
     expected_answer: "Clone the repository, install Python and Node.js dependencies, configure environment variables, and start the backend and frontend services"
     expected_citations: ["02_installation_guide.md"]
     metadata:
@@ -30,7 +30,7 @@ evaluation_set:
       difficulty: "easy"
 
   # Guardrails
-  - question: "What types of guardrails does Fortes Eduction have?"
+  - question: "What types of guardrails does Fortes Education have?"
     expected_answer: "Prompt injection detection, PII redaction, and grounding score validation"
     expected_citations: ["03_guardrails_documentation.md"]
     metadata:

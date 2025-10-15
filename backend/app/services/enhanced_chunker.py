@@ -1,5 +1,5 @@
 """
-Enhanced Chunking Service for Fortes Eduction
+Enhanced Chunking Service for Fortes Education
 Implements chunking with doc_id and line number tracking for citations
 """
 

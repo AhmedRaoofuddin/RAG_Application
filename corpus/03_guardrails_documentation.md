@@ -1,8 +1,8 @@
-# Fortes Eduction Guardrails System
+# Fortes Education Guardrails System
 
 ## Overview
 
-The guardrails system in Fortes Eduction provides multiple layers of protection and quality assurance for the RAG Q&A pipeline.
+The guardrails system in Fortes Education provides multiple layers of protection and quality assurance for the RAG Q&A pipeline.
 
 ## Guardrail Types
 

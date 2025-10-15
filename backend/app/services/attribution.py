@@ -1,5 +1,5 @@
 """
-Attribution and Hallucination Detection Service for Fortes Eduction
+Attribution and Hallucination Detection Service for Fortes Education
 Implements sentence-level citation mapping and unsupported content flagging
 """
 

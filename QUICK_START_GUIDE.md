@@ -1,4 +1,4 @@
-# 🚀 Fortes Eduction - Quick Start Guide
+# 🚀 Fortes Education - Quick Start Guide
 
 ## ⚡ Fastest Way to Run (2 Terminals Required)
 
@@ -10,7 +10,7 @@ cd C:\Users\dev2\Downloads\Fortes_Assesment\Fortes_Assesment\backend
 
 # Set OpenAI API Key
 $env:OPENAI_API_KEY='your-openai-api-key-here'
-$env:PROJECT_NAME='Fortes Eduction'
+$env:PROJECT_NAME='Fortes Education'
 $env:RAG_STORE='sqlite'
 
 # Install minimal dependencies (one-time)
@@ -95,11 +95,11 @@ Once both servers are running:
 
 1. **Backend Health:**
    - Open: http://localhost:8000/
-   - Should see JSON: `{"message": "Welcome to Fortes Eduction API", ...}`
+   - Should see JSON: `{"message": "Welcome to Fortes Education API", ...}`
 
 2. **Frontend Health:**
    - Open: http://localhost:3000
-   - Should see "Fortes Eduction" homepage
+   - Should see "Fortes Education" homepage
 
 3. **API Documentation:**
    - Open: http://localhost:8000/docs
@@ -121,7 +121,7 @@ Once both servers are running:
 
 1. Go to Chat section
 2. Select your knowledge base
-3. Ask: **"What is Fortes Eduction?"**
+3. Ask: **"What is Fortes Education?"**
 4. Watch for:
    - ✅ Streaming response
    - ✅ Citations: `[citation:1]`
@@ -228,7 +228,7 @@ Your OpenAI API key is configured and the system is ready to demonstrate:
 ✅ Attribution & hallucination detection  
 ✅ Real-time streaming responses  
 ✅ Token/cost tracking  
-✅ Complete Fortes Eduction branding  
+✅ Complete Fortes Education branding  
 
 **Start with Terminal 1 (Backend), then Terminal 2 (Frontend)**
 

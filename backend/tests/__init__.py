@@ -1,2 +1,2 @@
-# Fortes Eduction Tests
+# Fortes Education Tests
 

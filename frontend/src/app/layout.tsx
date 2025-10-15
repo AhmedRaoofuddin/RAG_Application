@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fortes Eduction",
+  title: "Fortes Education",
   description: "Advanced RAG Q&A System with Built-in Guardrails and Attribution",
 };
 

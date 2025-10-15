@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = os.getenv("PROJECT_NAME", "Fortes Eduction")  # Project name
+    PROJECT_NAME: str = os.getenv("PROJECT_NAME", "Fortes Education")  # Project name
     VERSION: str = os.getenv("VERSION", "1.0.0")  # Project version
     API_V1_STR: str = "/api"  # API version string
 

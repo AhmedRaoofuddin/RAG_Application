@@ -1,4 +1,4 @@
-# Fortes Eduction - Advanced RAG Q&A System
+# Fortes Education - Advanced RAG Q&A System
 
 > Intelligent. Grounded. Safe. 🚀
 

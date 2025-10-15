@@ -148,8 +148,8 @@ class TestEvaluationMath:
 def test_all_metrics_integration():
     """Integration test for all metrics"""
     # Test case: similar but not identical answers
-    predicted = "Fortes Eduction is an advanced RAG system for Q&A"
-    expected = "Fortes Eduction is a RAG system for question answering"
+    predicted = "Fortes Education is an advanced RAG system for Q&A"
+    expected = "Fortes Education is a RAG system for question answering"
 
     em = EvaluationMetrics.exact_match(predicted, expected)
     f1 = EvaluationMetrics.f1_score(predicted, expected)

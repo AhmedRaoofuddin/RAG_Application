@@ -1,5 +1,5 @@
 """
-Enhanced Chat Service for Fortes Eduction
+Enhanced Chat Service for Fortes Education
 Integrates guardrails, attribution, observability, and advanced RAG features
 """
 
@@ -146,9 +146,9 @@ async def generate_enhanced_response(
             contextualize_q_prompt
         )
 
-        # Enhanced QA prompt with Fortes Eduction branding
+        # Enhanced QA prompt with Fortes Education branding
         qa_system_prompt = (
-            "You are Fortes Eduction Assistant, an expert Q&A system powered by RAG technology. "
+            "You are Fortes Education Assistant, an expert Q&A system powered by RAG technology. "
             "You will be given a user question and a set of related contexts to answer it. "
             "Each context has an implicit reference number based on its position (first context is 1, second is 2, etc.). "
             "Please provide a clean, concise, and accurate answer using these contexts. "

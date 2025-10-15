@@ -1,6 +1,6 @@
-# Fortes Eduction - Sample Knowledge Base
+# Fortes Education - Sample Knowledge Base
 
-This directory contains sample documentation for testing and demonstrating the Fortes Eduction RAG Q&A system.
+This directory contains sample documentation for testing and demonstrating the Fortes Education RAG Q&A system.
 
 ## Contents
 
@@ -39,7 +39,7 @@ On first run, these documents are automatically:
 Try these queries to test the system:
 
 ### Basic Queries
-- "What is Fortes Eduction?"
+- "What is Fortes Education?"
 - "How do I install the system?"
 - "What guardrails are available?"
 

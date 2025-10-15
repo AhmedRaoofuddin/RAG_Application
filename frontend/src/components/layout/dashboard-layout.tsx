@@ -15,7 +15,7 @@ export default function DashboardLayout({
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Guest mode - no authentication required for Fortes Eduction
+  // Guest mode - no authentication required for Fortes Education
   // Authentication has been removed to allow direct access
 
   const handleLogout = () => {
@@ -59,7 +59,7 @@ export default function DashboardLayout({
                 alt="Logo"
                 className="w-16 h-16 rounded-lg"
               />
-              Fortes Eduction
+              Fortes Education
             </Link>
           </div>
 

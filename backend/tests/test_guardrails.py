@@ -33,7 +33,7 @@ class TestGuardrailsService:
     def test_safe_queries_pass(self):
         """Test that normal queries are not flagged"""
         safe_queries = [
-            "What is Fortes Eduction?",
+            "What is Fortes Education?",
             "How do I install the system?",
             "Tell me about the guardrails feature",
             "What are the configuration options?"
@@ -109,7 +109,7 @@ class TestGuardrailsService:
     def test_process_query_integration(self):
         """Integration test for query processing"""
         # Test normal query
-        result = self.guardrails.process_query("What is Fortes Eduction?")
+        result = self.guardrails.process_query("What is Fortes Education?")
         assert result["is_safe"], "Normal query should be safe"
         assert not result["injection_detected"], "Should not detect injection"
 

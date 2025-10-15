@@ -129,9 +129,9 @@ def test_chunker_integration():
 
     # Test with realistic document
     text = """
-# Fortes Eduction Overview
+# Fortes Education Overview
 
-Fortes Eduction is an advanced RAG system.
+Fortes Education is an advanced RAG system.
 
 ## Features
 

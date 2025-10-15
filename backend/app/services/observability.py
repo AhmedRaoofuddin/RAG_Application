@@ -1,5 +1,5 @@
 """
-Observability Service for Fortes Eduction
+Observability Service for Fortes Education
 Implements token logging, cost tracking, and prompt caching
 """
 

@@ -16,7 +16,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-md p-8 space-y-6 text-center">
             <h1 className="text-3xl font-bold text-gray-900">
-            Fortes Eduction
+            Fortes Education
             </h1>
           <p className="text-gray-600">
             Redirecting to dashboard...

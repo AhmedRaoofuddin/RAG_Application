@@ -53,7 +53,7 @@ class TestRetriever:
     def test_chunk_retrieval_preparation(self):
         """Test that chunks are prepared for retrieval"""
         text = """
-        Fortes Eduction is an advanced RAG system.
+        Fortes Education is an advanced RAG system.
         It includes guardrails and attribution.
         The system is designed for Q&A applications.
         """
@@ -132,7 +132,7 @@ def test_retrieval_integration():
     """Integration test for retrieval pipeline"""
     # Create sample documents
     documents = [
-        ("Fortes Eduction is a RAG system with advanced features.", "doc1.md"),
+        ("Fortes Education is a RAG system with advanced features.", "doc1.md"),
         ("The system includes guardrails and attribution.", "doc2.md"),
         ("Installation requires Python 3.9 and Node.js 18.", "doc3.md")
     ]
@@ -148,7 +148,7 @@ def test_retrieval_integration():
     assert len(all_chunks) > 0, "Should create chunks from documents"
 
     # Simulate retrieval
-    query = "What is Fortes Eduction?"
+    query = "What is Fortes Education?"
     query_embedding = embeddings.embed_query(query)
 
     assert query_embedding is not None, "Query should be embeddable"

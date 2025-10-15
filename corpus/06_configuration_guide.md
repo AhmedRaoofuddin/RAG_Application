@@ -6,7 +6,7 @@
 
 ```bash
 # Application Identity
-PROJECT_NAME=Fortes Eduction
+PROJECT_NAME=Fortes Education
 VERSION=1.0.0
 API_V1_STR=/api
 ```

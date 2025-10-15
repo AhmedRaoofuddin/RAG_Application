@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Evaluation Harness for Fortes Eduction
+Evaluation Harness for Fortes Education
 Runs evaluation set and computes metrics
 """
 
@@ -146,7 +146,7 @@ def run_evaluation(eval_file: str = "eval.yaml", output_file: str = "eval_report
     Run evaluation harness
     """
     logger.info("=" * 80)
-    logger.info("Fortes Eduction - Evaluation Harness")
+    logger.info("Fortes Education - Evaluation Harness")
     logger.info("=" * 80)
 
     # Load evaluation set
@@ -293,7 +293,7 @@ def test_eval_math():
 
 def main():
     """Main entry point"""
-    parser = argparse.ArgumentParser(description="Run Fortes Eduction evaluation harness")
+    parser = argparse.ArgumentParser(description="Run Fortes Education evaluation harness")
     parser.add_argument("--eval-file", default="eval.yaml", help="Path to evaluation YAML file")
     parser.add_argument("--output", default="eval_report.json", help="Output report file")
     parser.add_argument("--test-math", action="store_true", help="Run evaluation math sanity test")

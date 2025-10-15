@@ -1,5 +1,5 @@
 """
-Guardrails service for Fortes Eduction RAG Q&A App
+Guardrails service for Fortes Education RAG Q&A App
 Implements prompt injection detection, PII redaction, and grounding score validation
 """
 

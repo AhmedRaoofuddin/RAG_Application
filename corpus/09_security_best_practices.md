@@ -2,7 +2,7 @@
 
 ## Overview
 
-While Fortes Eduction includes built-in guardrails, following security best practices is essential for production deployments.
+While Fortes Education includes built-in guardrails, following security best practices is essential for production deployments.
 
 ## API Key Security
 
@@ -64,7 +64,7 @@ ufw deny 8000
 
 ### Current State
 
-Fortes Eduction currently operates without authentication for assessment purposes.
+Fortes Education currently operates without authentication for assessment purposes.
 
 ### Production Recommendations
 

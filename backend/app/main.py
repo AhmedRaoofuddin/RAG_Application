@@ -75,7 +75,7 @@ async def startup_event():
 @app.get("/")
 def root():
     return {
-        "message": "Welcome to Fortes Eduction API",
+        "message": "Welcome to Fortes Education API",
         "version": settings.VERSION,
         "project": settings.PROJECT_NAME,
         "features": [

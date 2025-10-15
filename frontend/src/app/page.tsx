@@ -15,7 +15,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-black flex items-center justify-center">
       <div className="max-w-md mx-auto px-4 py-24 text-center">
         <h1 className="text-6xl font-bold tracking-tight text-black mb-8">
-          Fortes Eduction
+          Fortes Education
         </h1>
         <p className="text-xl text-gray-500 mb-8">
           Advanced RAG Q&A System

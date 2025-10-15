@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fortes Eduction implements sentence-level attribution to ensure every claim in generated responses is traceable to source documents.
+Fortes Education implements sentence-level attribution to ensure every claim in generated responses is traceable to source documents.
 
 ## How Attribution Works
 
@@ -93,7 +93,7 @@ MIN_CITATIONS = 1
 {
   "sentences": [
     {
-      "text": "Fortes Eduction supports PDF, DOCX, and Markdown formats.",
+      "text": "Fortes Education supports PDF, DOCX, and Markdown formats.",
       "citations": [
         {
           "doc_id": "01_fortes_eduction_overview.md",

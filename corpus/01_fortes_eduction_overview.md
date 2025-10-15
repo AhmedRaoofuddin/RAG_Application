@@ -1,8 +1,8 @@
-# Fortes Eduction - RAG Q&A System Overview
+# Fortes Education - RAG Q&A System Overview
 
 ## Introduction
 
-Fortes Eduction is an advanced Retrieval-Augmented Generation (RAG) question-answering system designed to provide accurate, grounded, and safe responses based on your knowledge base.
+Fortes Education is an advanced Retrieval-Augmented Generation (RAG) question-answering system designed to provide accurate, grounded, and safe responses based on your knowledge base.
 
 ## Key Features
 
@@ -31,7 +31,7 @@ Fortes Eduction is an advanced Retrieval-Augmented Generation (RAG) question-ans
 
 ## Architecture
 
-Fortes Eduction uses a modern tech stack:
+Fortes Education uses a modern tech stack:
 - **Backend**: Python FastAPI with async support
 - **Frontend**: Next.js 14 with TypeScript
 - **Vector Store**: ChromaDB (with support for Qdrant and FAISS)

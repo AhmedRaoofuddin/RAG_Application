@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers strategies to optimize Fortes Eduction for speed, cost, and resource efficiency.
+This guide covers strategies to optimize Fortes Education for speed, cost, and resource efficiency.
 
 ## Retrieval Optimization
 

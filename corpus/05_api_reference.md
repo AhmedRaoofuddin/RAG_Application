@@ -1,8 +1,8 @@
-# Fortes Eduction API Reference
+# Fortes Education API Reference
 
 ## Authentication
 
-Currently, Fortes Eduction operates in guest mode with no authentication required. All API endpoints are publicly accessible.
+Currently, Fortes Education operates in guest mode with no authentication required. All API endpoints are publicly accessible.
 
 ## Base URL
 
@@ -125,7 +125,7 @@ Content-Type: application/json
   "messages": [
     {
       "role": "user",
-      "content": "What is Fortes Eduction?"
+      "content": "What is Fortes Education?"
     }
   ]
 }
@@ -133,7 +133,7 @@ Content-Type: application/json
 
 **Response**: 200 OK (Server-Sent Events)
 ```
-0:"Fortes Eduction is an advanced RAG system... [citation:1]"
+0:"Fortes Education is an advanced RAG system... [citation:1]"
 d:{"finishReason":"stop","grounding_score":0.85,"has_hallucination":false}
 ```
 

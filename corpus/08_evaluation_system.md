@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fortes Eduction includes a comprehensive evaluation harness to measure and track RAG system performance.
+Fortes Education includes a comprehensive evaluation harness to measure and track RAG system performance.
 
 ## Metrics
 
@@ -55,8 +55,8 @@ F1 = 2 × (Precision × Recall) / (Precision + Recall)
 
 ```yaml
 evaluation_set:
-  - question: "What is Fortes Eduction?"
-    expected_answer: "Fortes Eduction is an advanced RAG Q&A system"
+  - question: "What is Fortes Education?"
+    expected_answer: "Fortes Education is an advanced RAG Q&A system"
     expected_citations: ["01_fortes_eduction_overview.md"]
     metadata:
       category: "overview"
@@ -98,9 +98,9 @@ Results are written to `eval_report.json`:
   },
   "results": [
     {
-      "question": "What is Fortes Eduction?",
-      "predicted": "Fortes Eduction is an advanced RAG system...",
-      "expected": "Fortes Eduction is an advanced RAG Q&A system",
+      "question": "What is Fortes Education?",
+      "predicted": "Fortes Education is an advanced RAG system...",
+      "expected": "Fortes Education is an advanced RAG Q&A system",
       "em": 0,
       "f1": 0.89,
       "similarity": 0.95,

@@ -1,5 +1,5 @@
 """
-Stub/Fallback Services for Fortes Eduction
+Stub/Fallback Services for Fortes Education
 Provides deterministic local implementations when API keys are unavailable
 """
 
@@ -110,7 +110,7 @@ class StubLLM(BaseLLM):
             elif "question" in prompt.lower() or "answer" in prompt.lower():
                 response = (
                     "I understand your question, but I'm currently running in stub mode. "
-                    "Please set up your OpenAI API key to get real, context-aware responses from Fortes Eduction."
+                    "Please set up your OpenAI API key to get real, context-aware responses from Fortes Education."
                 )
             else:
                 # Simple echo for other cases
