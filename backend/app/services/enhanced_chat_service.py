@@ -117,10 +117,20 @@ async def generate_enhanced_response(
             db.commit()
             return
         
-        # Use first vector store
-        retriever = vector_stores[0].as_retriever(
-            search_kwargs={"k": settings.TOP_K_RETRIEVAL}
-        )
+        # Create a merged retriever that queries ALL documents in ALL vector stores
+        if len(vector_stores) == 1:
+            # Single vector store - use directly
+            retriever = vector_stores[0].as_retriever(
+                search_kwargs={"k": settings.TOP_K_RETRIEVAL}
+            )
+        else:
+            # Multiple vector stores - use ensemble retriever to query all
+            from langchain.retrievers import EnsembleRetriever
+            retrievers = [vs.as_retriever(search_kwargs={"k": settings.TOP_K_RETRIEVAL // len(vector_stores)}) for vs in vector_stores]
+            retriever = EnsembleRetriever(
+                retrievers=retrievers,
+                weights=[1.0 / len(retrievers)] * len(retrievers)
+            )
         
         # Initialize LLM
         llm = LLMFactory.create()

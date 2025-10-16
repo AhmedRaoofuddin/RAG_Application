@@ -1,0 +1,87 @@
+version: '3.8'
+
+# Simplified Docker Compose for Fortes Education
+# Uses SQLite + Local File Storage (no external dependencies)
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: fortes-backend
+    ports:
+      - "8000:8000"
+    environment:
+      # Database Configuration (SQLite)
+      - RAG_STORE=sqlite
+      - SQLITE_FILE=/app/data/fortes.db
+      
+      # Vector Store Configuration (Local ChromaDB)
+      - VECTOR_STORE_TYPE=chroma
+      - CHROMA_URL=http://chromadb:8000
+      
+      # OpenAI Configuration (replace with your actual key for production)
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-your-openai-api-key-here}
+      - EMBEDDING_MODEL=text-embedding-3-small
+      - GENERATION_MODEL=gpt-4o-mini
+      
+      # Server Configuration
+      - HOST=0.0.0.0
+      - PORT=8000
+      - TOP_K_RETRIEVAL=5
+      - GROUNDING_THRESHOLD=0.62
+      
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+    networks:
+      - fortes-network
+    depends_on:
+      - chromadb
+    restart: unless-stopped
+    command: python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: fortes-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - fortes-network
+    depends_on:
+      - backend
+    restart: unless-stopped
+    command: npm run dev
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: fortes-chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    networks:
+      - fortes-network
+    restart: unless-stopped
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=FALSE
+
+volumes:
+  chroma_data:
+    driver: local
+
+networks:
+  fortes-network:
+    driver: bridge
+

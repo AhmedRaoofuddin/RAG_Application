@@ -6,6 +6,15 @@ A production-ready RAG (Retrieval Augmented Generation) system with built-in gua
 
 **Repository:** https://github.com/AhmedRaoofuddin/RAG_Application
 
+## 🆕 Latest Updates
+
+✅ **Chat now queries ALL documents in knowledge base** (not limited to single document)  
+✅ **Evaluation & test report generated** - See `eval_report.json` for metrics  
+✅ **Docker support added** - Simple one-command deployment with `docker-compose`  
+
+📖 See [`FIXES_APPLIED.md`](./FIXES_APPLIED.md) for details  
+🐳 See [`DOCKER_SETUP.md`](./DOCKER_SETUP.md) for Docker instructions
+
 ## ✨ Features
 
 - 📚 **Knowledge Base Management** - Create and manage multiple knowledge bases
@@ -42,7 +51,29 @@ A production-ready RAG (Retrieval Augmented Generation) system with built-in gua
    
    Edit `start_backend.bat` and replace the `OPENAI_API_KEY` value with your actual key.
 
-### Running the Application
+### Option A: Docker (Easiest! 🐳)
+
+```bash
+# Set your OpenAI API key
+export OPENAI_API_KEY=your-key-here
+
+# Start all services (backend + frontend + ChromaDB)
+docker-compose -f docker-compose.simple.yml up -d
+
+# Access the application
+# Frontend: http://localhost:3000
+# Backend API: http://localhost:8000
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:OPENAI_API_KEY="your-key-here"
+docker-compose -f docker-compose.simple.yml up -d
+```
+
+See [`DOCKER_SETUP.md`](./DOCKER_SETUP.md) for full Docker documentation.
+
+### Option B: Manual Setup
 
 **Easy Way (Recommended):**
 ```bash
